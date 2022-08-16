@@ -1,14 +1,11 @@
 name: CI
 on:
-  push:
-  pull_request:
   workflow_dispatch:
 jobs:
-  hosted:
-    name: Demo Hosted Runners
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          path: repo
-      - run: pwd
+      - run: gh api /repos/lindluni/sandbox/actions/runs/${RUN_ID}/attempts/${RUN_ATTEMPT}/logs
+        env:
+          RUN_ID: ${{ github.run_id }}
+          RUN_ATTEMPT: ${{ github.run_attempt }}
