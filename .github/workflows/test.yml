@@ -8,6 +8,6 @@ jobs:
         id: event
         with:
           script: |
-            return JSON.stringify(context.payload)
+            return JSON.stringify(context)
           result-encoding: string
       - run: echo "${{ steps.event.outputs.results }}"
