@@ -8,7 +8,7 @@ jobs:
         id: event
         with:
           script: |
-            return JSON.parse(JSON.stringify(repo))
+            return JSON.stringify(JSON.parse(repo))
           result-encoding: string
         env:
           repo: ${{ github.event.repository }}
