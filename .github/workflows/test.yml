@@ -8,6 +8,8 @@ jobs:
         id: event
         with:
           script: |
-            return JSON.stringify(context)
+            return JSON.stringify(process.env.repo)
           result-encoding: string
+        env:
+          repo: ${{ github.event.repository }}
       - run: echo "${{ steps.event.outputs.results }}"
