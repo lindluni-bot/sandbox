@@ -1,0 +1,13 @@
+on: workflow_dispatch
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v6
+        id: event
+        with:
+          script: |
+            return JSON.stringify("${{ github.event.repository }}")
+          result-encoding: string
+      - run: echo "${{ steps.event.outputs.results }}"
