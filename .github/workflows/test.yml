@@ -8,6 +8,6 @@ jobs:
         id: event
         with:
           script: |
-            return JSON.stringify("${{ toJson(github.event.repository) }}")
+            return JSON.stringify(context.payload)
           result-encoding: string
       - run: echo "${{ steps.event.outputs.results }}"
