@@ -2,14 +2,6 @@ on: workflow_dispatch
 
 jobs:
   welcome:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
-      - uses: actions/github-script@v6
-        id: event
-        with:
-          script: |
-            return JSON.stringify(JSON.parse(repo))
-          result-encoding: string
-        env:
-          repo: ${{ github.event.repository }}
-      - run: echo "${{ steps.event.outputs.result }}"
+      - run: whoami
