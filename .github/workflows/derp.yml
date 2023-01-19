@@ -5,6 +5,7 @@ on: push
 jobs:
   test:
     runs-on: ubuntu-latest
-    container: ubuntu:latest
+    container: cimg/base:2023.01
     steps:
+      - run: git --version
       - uses: actions/checkout@v3
