@@ -2,6 +2,6 @@ on: workflow_dispatch
 
 jobs:
   welcome:
-    runs-on: self-hosted
+    runs-on: windows-latest
     steps:
-      - run: whoami
+      - run: wmic cpu get NumberOfCores,NumberOfLogicalProcessor
