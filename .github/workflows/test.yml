@@ -4,4 +4,4 @@ jobs:
   welcome:
     runs-on: windows-latest
     steps:
-      - run: wmic cpu get NumberOfCores,NumberOfLogicalProcessor
+      - run: wmic cpu get NumberOfCores,NumberOfLogicalProcessors
