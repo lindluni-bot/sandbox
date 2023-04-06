@@ -27,7 +27,7 @@ jobs:
           script: return []
   build:
     # The type of runne\r that the job will run on
-    if: needs.crap.outputs.* != ''
+    if: needs.crap.outputs.dirs != null
     runs-on: ubuntu-latest
     strategy:
       matrix:
