@@ -1,0 +1,13 @@
+name: StackHawk
+on:
+  workflow_dispatch:
+jobs:
+  stackhawk-hawkscan:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: stackhawk/hawkscan-action@v2.0.2
+      with:
+        apiKey: ${{ secrets.HAWK_API_KEY }}
+        codeScanningAlerts: true
+        githubToken: ${{ github.token }}
