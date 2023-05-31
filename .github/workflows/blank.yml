@@ -16,4 +16,6 @@ jobs:
   crap:
     runs-on: ubuntu-latest
     steps:
-      - run: whoami && hostname
+      - uses: zaproxy/action-full-scan@v0.4.0
+        with:
+          target: 'http://portswigger-labs.net/'
