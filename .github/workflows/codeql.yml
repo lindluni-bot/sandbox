@@ -11,7 +11,7 @@ on:
 jobs:
   analyze:
     name: Analyze
-    runs-on: self-hosted
+    runs-on: ${{ matrix.runner }}
     timeout-minutes: ${{ (matrix.language == 'swift' && 120) || 360 }}
     permissions:
       actions: read
@@ -22,6 +22,7 @@ jobs:
       fail-fast: false
       matrix:
         language: [ 'javascript' ]
+        runner: ['windows-latest','ubuntu-latest','self-hosted']
 
     steps:
     - name: Checkout repository
