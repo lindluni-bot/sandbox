@@ -45,7 +45,7 @@ jobs:
 
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
-      uses: department-of-veterans-affairs/codeql-tools@main
+      uses: department-of-veterans-affairs/codeql-tools/codeql-analysis@main
       with:
         languages: ${{ matrix.language }}
       
