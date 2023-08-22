@@ -20,9 +20,9 @@ jobs:
         with:
           distribution: 'corretto'
           java-version: '17'
-      - name: Setup Maven
-        uses: stCarolas/setup-maven@v2.8.0
-        with:
-          maven-version: '3.8.7'
+      # - name: Setup Maven
+      #   uses: stCarolas/setup-maven@v2.8.0
+      #   with:
+      #     maven-version: '3.8.7'
       - name: Configure Maven Settings
-        uses: s4u/maven-settings-action@fdd7389b05df966028563231e9f46d77b9504a54
+        uses: s4u/maven-settings-action@v2.8.0
