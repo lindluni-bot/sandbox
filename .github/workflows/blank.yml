@@ -21,7 +21,7 @@ jobs:
           distribution: 'corretto'
           java-version: '17'
       - name: Setup Maven
-        uses: stCarolas/setup-maven@07fbbe97d97ef44336b7382563d66743297e442f
+        uses: stCarolas/setup-maven@v2.8.0
         with:
           maven-version: '3.8.7'
       - name: Configure Maven Settings
