@@ -8,21 +8,8 @@ jobs:
   build-dependencies:
     name: Build Dependencies
     runs-on: ubuntu-latest
-    permissions:
-      actions: read
-      contents: read
-      security-events: write
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
-      - name: Setup Java
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'corretto'
-          java-version: '17'
-      # - name: Setup Maven
-      #   uses: stCarolas/setup-maven@v2.8.0
-      #   with:
-      #     maven-version: '3.8.7'
-      - name: Configure Maven Settings
-        uses: s4u/maven-settings-action@v2.8.0
+        run: |
+          sudo dnf -y install dnf-plugins-core
+          sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
