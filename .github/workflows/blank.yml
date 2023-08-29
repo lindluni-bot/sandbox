@@ -4,6 +4,9 @@ on:
   push:
   workflow_dispatch:
 
+env:
+  ProgressPreference: SilentlyContinue
+
 jobs:
   build-dependencies:
     name: Build Dependencies
