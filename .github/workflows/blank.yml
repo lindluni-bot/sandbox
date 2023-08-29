@@ -1,4 +1,4 @@
-name: Maven
+name: PowerShell
 
 on:
   push:
@@ -7,9 +7,8 @@ on:
 jobs:
   build-dependencies:
     name: Build Dependencies
-    runs-on: self-hosted
+    runs-on: windows-latest
     steps:
-      - name: Install Docker
-        run: |
-          sudo dnf -y install dnf-plugins-core
-          sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+      - name: Install Salesforce
+        run: sh "npm install --global @salesforce/cli@2.5.8"
+
