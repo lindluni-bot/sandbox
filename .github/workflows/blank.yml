@@ -20,6 +20,7 @@ jobs:
       #     echo "Upgrading NPM"
       #     npm install -g npm
       - run: |
+          node --version
           npm --version
           npm install -g npm
       - run: |
