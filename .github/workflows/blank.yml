@@ -18,6 +18,9 @@ jobs:
       #     echo "Upgrading NPM"
       #     npm install -g npm
       - run: |
+          npm --version
+          npm install -g npm
+      - run: |
           echo "Installing sf"
           npm install --global --progress=false @salesforce/cli@2.5.8
       - run: |
