@@ -13,6 +13,8 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/setup-node@v3
+        with:
+          cache: npm
       # - name: INSTALL SFDX CLI
       #   run: |
       #     echo "Upgrading NPM"
