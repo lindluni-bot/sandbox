@@ -13,10 +13,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/setup-node@v3
-      - name: INSTALL SFDX CLI
-        run: |
-          echo "Upgrading NPM"
-          npm install -g npm
+      # - name: INSTALL SFDX CLI
+      #   run: |
+      #     echo "Upgrading NPM"
+      #     npm install -g npm
       - run: |
           echo "Installing sf"
           npm install --global @salesforce/cli@2.5.8
