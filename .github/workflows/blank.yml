@@ -10,6 +10,11 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/setup-node@v3
-      - name: Install Salesforce
-        run: sh "npm install --global @salesforce/cli@2.5.8"
-
+      - name: INSTALL SFDX CLI 
+        run: |
+          echo "Installing SFDX CLI"
+          npm install -g npm
+          node --version
+          Write-Host "npm install --global @salesforce/cli@2.5.8"
+          npm install --global @salesforce/cli@2.5.8
+          sf version --verbose --json
