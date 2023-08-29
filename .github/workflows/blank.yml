@@ -19,6 +19,6 @@ jobs:
       #     npm install -g npm
       - run: |
           echo "Installing sf"
-          npm install --global @salesforce/cli@2.5.8
+          npm install --global --no-progress @salesforce/cli@2.5.8
       - run: |
           sf version --verbose --json
