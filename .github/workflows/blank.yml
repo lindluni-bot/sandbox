@@ -9,6 +9,7 @@ jobs:
     name: Build Dependencies
     runs-on: windows-latest
     steps:
+      - uses: setup-node@v3
       - name: Install Salesforce
         run: sh "npm install --global @salesforce/cli@2.5.8"
 
