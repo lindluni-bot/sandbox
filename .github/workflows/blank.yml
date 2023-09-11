@@ -4,25 +4,13 @@ on:
   push:
   workflow_dispatch:
 
-env:
-  ProgressPreference: SilentlyContinue
-
 jobs:
   build-dependencies:
     name: Build Dependencies
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v3
-      # - name: INSTALL SFDX CLI
-      #   run: |
-      #     echo "Upgrading NPM"
-      #     npm install -g npm
-      - run: |
-          node --version
-          npm --version
-          npm install -g npm
-      - run: |
-          echo "Installing sf"
-          npm install --global --progress=false @salesforce/cli@2.5.8
-      - run: |
-          sf version --verbose --json
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: hyperledger/fabric
+      - run: ls $GITHUB_WORKSPACE
