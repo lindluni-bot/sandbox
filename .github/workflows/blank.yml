@@ -13,4 +13,5 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: hyperledger/fabric
+          path: fabric
       - run: ls $GITHUB_WORKSPACE
